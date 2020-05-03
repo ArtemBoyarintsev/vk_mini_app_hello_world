@@ -11,17 +11,15 @@ import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import pan from '../img/pan_with_food.jpg';
 import './container.css';
 
-const Home = ({ id, go, fetchedUser }) => (
+const Sections = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader>Еда и нутриенты</PanelHeader>
 		<div class="container">
 			<img src={pan} alt="Norway" style={{height : '100%'}}/>
-				<div class="content">
-					<p>Почему это важно?</p>
-					<p>Мы привыкли думать, что автомобили, самолеты, новомодный искусственный интеллект - это сложно устроенные вещи.</p>
-					<p>Но что касается нашего организма? - Ни для кого не новость, что наш мозг превосходит по сложности всё перечисленное.</p>
-					<p>Но почему-то топливо для нашего организма - еда и его переработка в необходимые для организма вещества обделяется вниманием</p>
-					<p>Оставаясь с нами, вы сможете узнать много новой информации о необходимых витаминах, минералах. Узнаете о продуктах, богатых ими.</p>
+				<div class="button">
+					<Button size="xl" level="2" onClick={go} data-to="persik">Витамины</Button>
+					<Button size="xl" level="2" onClick={go} data-to="persik">Минералы</Button>
+					<Button size="xl" level="2" onClick={go} data-to="persik">Какашки</Button>
 				</div>
 		</div>
 		
@@ -39,7 +37,7 @@ const Home = ({ id, go, fetchedUser }) => (
 		<Group title="Navigation Example">
 			<Div>
 				<Button size="xl" level="2" onClick={go} data-to="persik">
-					Show me the Persik, please
+					Разделы
 				</Button>
 			</Div>
 			<Div>
@@ -47,16 +45,11 @@ const Home = ({ id, go, fetchedUser }) => (
 					Show me  Apricot, please
 				</Button>
 			</Div>
-			<Div>
-				<Button size="xl" level="2" onClick={go} data-to="sections">
-					Разделы
-				</Button>
-			</Div>
 		</Group>
 	</Panel>
 );
 
-Home.propTypes = {
+Sections.propTypes = {
 	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
 	fetchedUser: PropTypes.shape({
@@ -69,4 +62,4 @@ Home.propTypes = {
 	}),
 };
 
-export default Home;
+export default Sections;
