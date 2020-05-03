@@ -25,9 +25,31 @@ const Persik = props => (
 	</Panel>
 );
 
+
+const Apricot = props => (
+	<Panel id={props.id}>
+		<PanelHeader
+			left={<PanelHeaderButton onClick={props.go} data-to="home">
+				{osName === IOS ? <Icon28ChevronBack/> : <Icon24Back/>}
+			</PanelHeaderButton>}
+		>
+			Apricot
+		</PanelHeader>
+		<img className="Persik" src={persik} alt="Persik The Cat"/>
+	</Panel>
+);
+
+
+
 Persik.propTypes = {
 	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
 };
 
+Apricot.propTypes = {
+	id: PropTypes.string.isRequired,
+	go: PropTypes.func.isRequired,
+};
+
 export default Persik;
+export default Apricot;
