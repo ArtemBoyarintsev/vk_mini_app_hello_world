@@ -8,6 +8,7 @@ import Home from './panels/Home';
 import Persik from './panels/Persik';
 import Apricot from './panels/Apricot';
 import Sections from './panels/setctions'
+import Vitamins from './panels/vitamins'
 
 const App = () => {
 	const [activePanel, setActivePanel] = useState('home');
@@ -38,6 +39,7 @@ const App = () => {
 		<View activePanel={activePanel} popout={popout}>
 			<Home id='home' fetchedUser={fetchedUser} go={go} />
 			<Sections id='sections' fetchedUser={fetchedUser} go={go} />
+			<Vitamins id='vitamins' go={go} />
 			<Persik id='persik' go={go} />
 			<Apricot id='apricot' go={go} />
 		</View>

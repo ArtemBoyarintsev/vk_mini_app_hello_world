@@ -17,7 +17,7 @@ const Sections = ({ id, go, fetchedUser }) => (
 		<div class="container">
 			<img src={pan} alt="Norway" style={{height : '100%'}}/>
 				<div class="button">
-					<Button size="xl" level="2" onClick={go} data-to="persik">Витамины</Button>
+					<Button size="xl" level="2" onClick={go} data-to="vitamins">Витамины</Button>
 					<Button size="xl" level="2" onClick={go} data-to="persik">Минералы</Button>
 					<Button size="xl" level="2" onClick={go} data-to="persik">Какашки</Button>
 				</div>
