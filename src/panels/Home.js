@@ -10,8 +10,14 @@ import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
 import pan from '../img/pan_with_food.jpg';
 import './container.css';
+import example from './exampe'
 
 const Home = ({ id, go, fetchedUser }) => (
+	example
+);
+
+const Home2 = ({id, go, fetchedUser}) =>
+(
 	<Panel id={id}>
 		<PanelHeader>Еда и нутриенты</PanelHeader>
 		<div class="container">

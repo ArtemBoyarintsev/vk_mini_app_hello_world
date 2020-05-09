@@ -24,7 +24,7 @@ const osname = platform();
 class Example extends React.Component {
 
     constructor() {
-      super();
+      super()
       this.state = {
         activePanel: 'list',
         removeList: ['Михаил Андриевский', 'Вадим Дорохов', 'Саша Колобов'],
